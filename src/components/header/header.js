@@ -4,26 +4,26 @@ import styled from 'styled-components'
 function header() {
     return (
         <Nav>
-            <Logo src="/images/tfs.png" />
+            <Logo src="/images/tfs.png" alt="TFS logo" />
             <NavMenu>
-                <a>
-                    <img src="/images/home.svg" />
+                <a href="/">
+                    <img src="/images/home.svg" alt="home icon" />
                     <span>HOME</span>
                 </a>
-                <a>
-                    <img src="/images/request.svg" />
+                <a href="/request">
+                    <img src="/images/request.svg" alt="request a movie icon" />
                     <span>REQUEST A MOVIE</span>
                 </a>
-                <a>
-                    <img src="/images/history.svg" />
+                <a href="/history">
+                    <img src="/images/history.svg" alt="history icon" />
                     <span>HISTORY</span>
                 </a>
-                <a>
-                    <img src="/images/profile.png" />
+                <a href="/profile">
+                    <img src="/images/profile.png" alt="profile icon" />
                     <span>MY PROFILE</span>
                 </a>
             </NavMenu>
-            <UserImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjYlb0-QUxpdl8nTjSiF2NnXK9QRJ-EWNRnqwuutiyP4EDfM0LlHg7NjSVaoibynxEg6U&usqp=CAU"/>
+            <UserImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjYlb0-QUxpdl8nTjSiF2NnXK9QRJ-EWNRnqwuutiyP4EDfM0LlHg7NjSVaoibynxEg6U&usqp=CAU" alt="user icon" />
         </Nav>
     )
 }
