@@ -48,6 +48,8 @@ const NavMenu = styled.div`
     align-items: center;
 
     a {
+        text-decoration: none;
+        color: white;
         display: flex;
         align-items: center;
         padding: 0 12px;
