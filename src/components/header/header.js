@@ -31,11 +31,12 @@ function header() {
 export default header
 
 const Nav = styled.nav`
-    height: 70px;
+    height: 70px; 
     background: #090b13;
     display: flex;
     align-items: center;
     padding: 0 36px;
+    overflow-x: hidden;
 `
 const Logo = styled.img`
     width: 80px;
