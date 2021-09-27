@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import Slider from '../slider/slider'
+import Movies from '../movies/movies' 
 
 function home() {
     return (
         <Container>
             <Slider />
+            <Movies />
         </Container>
     )
 }
