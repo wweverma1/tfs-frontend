@@ -10,7 +10,7 @@ function header() {
                     <img src="/images/home.svg" alt="home icon" />
                     <span>HOME</span>
                 </a>
-                <a href="/request">
+                <a href="/movie">
                     <img src="/images/request.svg" alt="request a movie icon" />
                     <span>REQUEST A MOVIE</span>
                 </a>

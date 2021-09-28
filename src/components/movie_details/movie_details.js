@@ -25,7 +25,7 @@ function MovieDetails() {
             <Trailer>
                 <MovieTrailerPlayer>
                     {/* <iframe id="MovieTrailer" title="Trailer" src="https://www.youtube.com/embed/3KR8_igDs1Y?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" frameborder="0" allow="autoplay"></iframe> */}
-                    <ReactPlayer id='MovieTrailer' url='https://www.youtube.com/watch?v=3KR8_igDs1Y&frameborder=0' playing={true} loop={true} muted={volume} controls={false} width="100%" height="100%" />
+                    <ReactPlayer id='MovieTrailer' url='https://www.youtube.com/watch?v=3KR8_igDs1Y' playing={true} loop={true} muted={volume} controls={false} width="100%" height="100%" />
                     <UnMute onClick={() => setVolume(!volume)}>
                         <img src={volume ? "/images/mute.png" : "/images/unmute.png"} alt="Unmute" />
                     </UnMute>
