@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import {
+    Link
+} from "react-router-dom";
 
 function header() {
     return (
@@ -10,7 +13,7 @@ function header() {
                     <img src="/images/home.svg" alt="home icon" />
                     <span>HOME</span>
                 </a>
-                <a href="/movie">
+                <a href="/request">
                     <img src="/images/request.svg" alt="request a movie icon" />
                     <span>REQUEST A MOVIE</span>
                 </a>
@@ -23,7 +26,9 @@ function header() {
                     <span>MY PROFILE</span>
                 </a>
             </NavMenu>
-            <UserImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjYlb0-QUxpdl8nTjSiF2NnXK9QRJ-EWNRnqwuutiyP4EDfM0LlHg7NjSVaoibynxEg6U&usqp=CAU" alt="user icon" />
+            <Link to="/movie">
+                <UserImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjYlb0-QUxpdl8nTjSiF2NnXK9QRJ-EWNRnqwuutiyP4EDfM0LlHg7NjSVaoibynxEg6U&usqp=CAU" alt="user icon" />
+            </Link>
         </Nav>
     )
 }
