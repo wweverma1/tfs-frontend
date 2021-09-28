@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import Slider from '../slider/slider'
-import Movies from '../movies/movies' 
+import MoviesList from '../movies_list/movies_list' 
 
 function home() {
     return (
         <Container>
             <Slider />
-            <Movies />
+            <MoviesList />
         </Container>
     )
 }

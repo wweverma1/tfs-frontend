@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function movies() {
+function movies_list() {
     return (
         <Container>
             <h4>Now Showing</h4>
@@ -37,7 +37,7 @@ function movies() {
     )
 }
 
-export default movies
+export default movies_list
 
 
 const Container = styled.div`
