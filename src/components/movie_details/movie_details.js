@@ -52,8 +52,8 @@ const Container = styled.div`
 `
 
 const Details = styled.div`
-    width: 50%;
-    padding: 30px 36px 26px;
+    width: 40%;
+    padding: 0px 36px 0px;
 
     @media (max-width: 900px) {
         width: 100%;
@@ -76,7 +76,7 @@ const Description = styled.div`
 `
 
 const BookTicket = styled.button`
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 4px;
     font-size: 15px;
@@ -95,7 +95,7 @@ const BookTicket = styled.button`
 `
 
 const Trailer = styled.div`
-    width: 50%;
+    width: 60%;
 
     @media (max-width: 900px) {
         width: 100%;
