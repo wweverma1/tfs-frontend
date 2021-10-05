@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 
 function MovieDetails() {
-    const [volume, setVolume] = useState(true);
+    const [mute, setMute] = useState(true);
 
     return (
         <Container>
@@ -25,9 +25,9 @@ function MovieDetails() {
             <Trailer>
                 <MovieTrailerPlayer>
                     {/* <iframe id="MovieTrailer" title="Trailer" src="https://www.youtube.com/embed/3KR8_igDs1Y?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" frameborder="0" allow="autoplay"></iframe> */}
-                    <ReactPlayer id='MovieTrailer' url='https://www.youtube.com/watch?v=3KR8_igDs1Y' playing={true} loop={true} muted={volume} controls={false} width="100%" height="100%" />
-                    <UnMute onClick={() => setVolume(!volume)}>
-                        <img src={volume ? "/images/mute.png" : "/images/unmute.png"} alt="Unmute" />
+                    <ReactPlayer id='MovieTrailer' url='https://www.youtube.com/watch?v=3KR8_igDs1Y' playing={true} loop={true} muted={mute} controls={false} width='100%' height='100%' />
+                    <UnMute onClick={() => setMute(!mute)}>
+                        <img src={mute ? "/images/muted.png" : "/images/unmuted.png"} alt="Unmute" />
                     </UnMute>
                 </MovieTrailerPlayer>
             </Trailer>
@@ -45,15 +45,19 @@ const Container = styled.div`
     background: #0c111b;
     border-radius: 10px;
     overflow: hidden;
+
+    @media (max-width: 900px) {
+        flex-direction: column-reverse;
+    }
 `
 
 const Details = styled.div`
     width: 50%;
     padding: 30px 36px 26px;
 
-    // @media (max-width: 900px) {
-    //     width: 100%;
-    // }
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 `
 
 const SubTitle = styled.div`
@@ -92,6 +96,10 @@ const BookTicket = styled.button`
 
 const Trailer = styled.div`
     width: 50%;
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 `
 
 const MovieTrailerPlayer = styled.div`
