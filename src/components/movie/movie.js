@@ -15,6 +15,6 @@ function movie() {
 export default movie
 
 const Container = styled.div`
-    min-height: calc(100vh - 170px);
+    min-height: calc(100vh - 160px);
     padding: 0 calc(3.5vw + 5px);
 `
