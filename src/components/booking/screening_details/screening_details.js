@@ -1,23 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
+import {
+    Link
+} from "react-router-dom";
 
 function screening_details() {
     return (
         <Container>
-            <h4>SCREENING DETAILS</h4>
+            <h4>SELECT SUITABLE SCREENING</h4>
             <Content>
-                <Wrap>
-                    <span>DateTime</span>
-                </Wrap>
-                <Wrap>
-                    <span>DateTime</span>
-                </Wrap>
-                <Wrap>
-                    <span>DateTime</span>
-                </Wrap>
-                <Wrap>
-                    <span>DateTime</span>
-                </Wrap>
+                <Link to="/booking" style={{"text-decoration": "none"}}>
+                    <Wrap>
+                        <span>DateTime</span>
+                    </Wrap>
+                </Link>
+                <Link to="/booking" style={{"text-decoration": "none"}}>
+                    <Wrap>
+                        <span>DateTime</span>
+                    </Wrap>
+                </Link>
+                <Link to="/booking" style={{"text-decoration": "none"}}>
+                    <Wrap>
+                        <span>DateTime</span>
+                    </Wrap>
+                </Link>
+                <Link to="/booking" style={{"text-decoration": "none"}}>
+                    <Wrap>
+                        <span>DateTime</span>
+                    </Wrap>
+                </Link>
             </Content>
         </Container>
     )
@@ -26,7 +37,7 @@ function screening_details() {
 export default screening_details
 
 const Container = styled.div`
-    margin-top: 30px;
+    // margin-top: 30px;
     padding: 30px 0px 26px;
     @media (max-width: 900px) {
         margin-bottom: 30px;

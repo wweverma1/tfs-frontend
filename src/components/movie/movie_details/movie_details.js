@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
+import {
+    Link
+} from "react-router-dom";
 
 function MovieDetails() {
     const [mute, setMute] = useState(true);
@@ -12,15 +15,17 @@ function MovieDetails() {
                     YOUR NAME
                 </h1>
                 <SubTitle>
-                    2016 • 116m • Animated
+                    English • 116m • Animated
                 </SubTitle>
                 <Description>
                     Your Name (Japanese: 君の名は。, Hepburn: Kimi no Na wa) is a 2016 Japanese animated romantic fantasy film produced by CoMix Wave Films and released by Toho. It depicts a high school boy in Tokyo and a high school girl in the Japanese countryside who suddenly and inexplicably begin to swap bodies.
                 </Description>
-                <BookTicket>
-                    <img src="/images/ticket.png" alt="" />
-                    <span>BOOK TICKETS</span>
-                </BookTicket>
+                <Link to="/booking" style={{"text-decoration":"none"}}>
+                    <BookTicket>
+                        <img src="/images/ticket.png" alt="" />
+                        <span>BOOK TICKETS</span>
+                    </BookTicket>
+                </Link>
             </Details>
             <Trailer>
                 <MovieTrailerPlayer>

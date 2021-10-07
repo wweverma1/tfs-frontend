@@ -1,18 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-import Slider from './slider/slider'
-import MoviesList from './movies_list/movies_list' 
+import CondensedMovieDetails from './condensed_movie_details/condensed_movie_details'
+import ScreeningDetails from './screening_details/screening_details'
+import SeatChart from './seat_chart/seat_chart'
 
-function home() {
+function booking() {
     return (
         <Container>
-            <Slider />
-            <MoviesList />
+            <CondensedMovieDetails />
+            <ScreeningDetails />
+            <SeatChart />
         </Container>
     )
 }
 
-export default home
+export default booking
 
 const Container = styled.main`
     min-height: calc(100vh - 70px);

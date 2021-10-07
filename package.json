@@ -17,7 +17,9 @@
     "react-redux": "^7.2.5",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "react-seat-picker": "^1.5.3",
     "react-slick": "^0.28.1",
+    "react-tooltip": "^4.2.21",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.1"
   },

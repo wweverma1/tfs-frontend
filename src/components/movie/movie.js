@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import MovieDetails from '../movie_details/movie_details'
-import ScreeningDetails from '../screening_details/screening_details'
+import MovieDetails from './movie_details/movie_details'
+import ScreeningDetails from './screening_details/screening_details'
 
 function movie() {
     return (
