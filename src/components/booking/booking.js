@@ -10,6 +10,10 @@ function booking() {
             <CondensedMovieDetails />
             <ScreeningDetails />
             <SeatChart />
+            <BookTicket>
+                <img src="/images/ticket.png" alt="" />
+                <span>BOOK TICKETS</span>
+            </BookTicket>
         </Container>
     )
 }
@@ -32,5 +36,24 @@ const Container = styled.main`
         left: 0;
         right: 0;
         z-index: -1;
+    }
+`
+
+const BookTicket = styled.button`
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 0px 24px; 
+    display: flex;
+    align-items: center;
+    height: 56px;
+    background: rgb(249, 249, 249, 0.8);
+    border: none;
+    letter-spacing: 1.8px;
+    cursor: pointer;
+
+    &:hover {
+        background: rgb(249, 249, 249);
     }
 `
