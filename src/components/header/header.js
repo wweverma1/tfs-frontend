@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import {
     Link
 } from "react-router-dom";
@@ -26,7 +27,7 @@ function header() {
                     <span>MY PROFILE</span>
                 </a>
             </NavMenu>
-            <Link to="/movie">
+            <Link to="/login">
                 <UserImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjYlb0-QUxpdl8nTjSiF2NnXK9QRJ-EWNRnqwuutiyP4EDfM0LlHg7NjSVaoibynxEg6U&usqp=CAU" alt="user icon" />
             </Link>
         </Nav>

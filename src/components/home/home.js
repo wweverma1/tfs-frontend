@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Slider from '../slider/slider'
-import MoviesList from '../movies_list/movies_list' 
+import Slider from './slider/slider'
+import MoviesList from './movies_list/movies_list' 
 
 function home() {
     return (

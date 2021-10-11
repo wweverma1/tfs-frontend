@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
+import {
+    Link
+} from "react-router-dom";
 
 function MovieDetails() {
-    const [volume, setVolume] = useState(true);
+    const [mute, setMute] = useState(true);
 
     return (
         <Container>
@@ -12,22 +15,24 @@ function MovieDetails() {
                     YOUR NAME
                 </h1>
                 <SubTitle>
-                    2016 • 116m • Animated
+                    English • 116m • Animated
                 </SubTitle>
                 <Description>
                     Your Name (Japanese: 君の名は。, Hepburn: Kimi no Na wa) is a 2016 Japanese animated romantic fantasy film produced by CoMix Wave Films and released by Toho. It depicts a high school boy in Tokyo and a high school girl in the Japanese countryside who suddenly and inexplicably begin to swap bodies.
                 </Description>
-                <BookTicket>
-                    <img src="/images/ticket.png" alt="" />
-                    <span>BOOK TICKETS</span>
-                </BookTicket>
+                <Link to="/booking" style={{"text-decoration":"none"}}>
+                    <BookTicket>
+                        <img src="/images/ticket.png" alt="" />
+                        <span>BOOK TICKETS</span>
+                    </BookTicket>
+                </Link>
             </Details>
             <Trailer>
                 <MovieTrailerPlayer>
                     {/* <iframe id="MovieTrailer" title="Trailer" src="https://www.youtube.com/embed/3KR8_igDs1Y?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" frameborder="0" allow="autoplay"></iframe> */}
-                    <ReactPlayer id='MovieTrailer' url='https://www.youtube.com/watch?v=3KR8_igDs1Y' playing={true} loop={true} muted={volume} controls={false} width="100%" height="100%" />
-                    <UnMute onClick={() => setVolume(!volume)}>
-                        <img src={volume ? "/images/mute.png" : "/images/unmute.png"} alt="Unmute" />
+                    <ReactPlayer id='MovieTrailer' url='https://www.youtube.com/watch?v=3KR8_igDs1Y' playing={true} loop={true} muted={mute} controls={false} width='100%' height='100%' />
+                    <UnMute onClick={() => setMute(!mute)}>
+                        <img src={mute ? "/images/muted.png" : "/images/unmuted.png"} alt="Unmute" />
                     </UnMute>
                 </MovieTrailerPlayer>
             </Trailer>
@@ -45,15 +50,19 @@ const Container = styled.div`
     background: #0c111b;
     border-radius: 10px;
     overflow: hidden;
+
+    @media (max-width: 900px) {
+        flex-direction: column-reverse;
+    }
 `
 
 const Details = styled.div`
-    width: 50%;
-    padding: 30px 36px 26px;
+    width: 40%;
+    padding: 0px 36px 0px;
 
-    // @media (max-width: 900px) {
-    //     width: 100%;
-    // }
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 `
 
 const SubTitle = styled.div`
@@ -72,7 +81,7 @@ const Description = styled.div`
 `
 
 const BookTicket = styled.button`
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 4px;
     font-size: 15px;
@@ -91,7 +100,11 @@ const BookTicket = styled.button`
 `
 
 const Trailer = styled.div`
-    width: 50%;
+    width: 60%;
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 `
 
 const MovieTrailerPlayer = styled.div`
