@@ -7,13 +7,15 @@ import SeatChart from './seat_chart/seat_chart'
 function booking() {
     return (
         <Container>
-            <CondensedMovieDetails />
-            <ScreeningDetails />
-            <SeatChart />
-            <BookTicket>
-                <img src="/images/ticket.png" alt="" />
-                <span>BOOK TICKETS</span>
-            </BookTicket>
+            <BookingSection>
+                <CondensedMovieDetails />
+                <ScreeningDetails />
+                <SeatChart />
+                <BookTicket>
+                    <img src="/images/ticket.png" alt="" />
+                    <span>BOOK TICKETS</span>
+                </BookTicket>
+            </BookingSection>
         </Container>
     )
 }
@@ -25,17 +27,18 @@ const Container = styled.main`
     padding: 0 calc(3.5vw + 5px);
     position: relative;
     overflow-x: hidden;
+`
 
-    &:before {
-        background: url("/images/home-background.png") center center / cover
-        no-repeat fixed;
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
+const BookingSection = styled.div`
+    margin-top: 40px;
+    height: 100%;
+    width: 100%;
+    background: #0c111b;
+    border-radius: 10px;
+    padding: 10px 40px;
+
+    @media (max-width: 900px) {
+        padding: 10px 20px;
     }
 `
 

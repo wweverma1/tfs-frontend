@@ -21,7 +21,6 @@ export default condensed_movie_details
 
 const Container = styled.div`
     padding: 30px 0px 0px;
-    // background: #0c111b;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -30,6 +29,12 @@ const Container = styled.div`
 
     img {
         padding: 0px 20px 0px 5px;
+    }
+
+    @media (max-width: 900px) {
+        img {
+            display: none;
+        }
     }
 `
 
