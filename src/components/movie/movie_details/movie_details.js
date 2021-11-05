@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
+import 'font-awesome/css/font-awesome.min.css'
 import {
     Link
 } from "react-router-dom";
@@ -78,6 +79,10 @@ const Description = styled.div`
     font-size: 20px;
     margin-top: 16px;
     color: rgb(249, 249, 249, 0.8);
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 `
 
 const BookTicket = styled.button`

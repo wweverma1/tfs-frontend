@@ -23,7 +23,7 @@ function header() {
                     <span>HISTORY</span>
                 </a>
                 <a href="/profile">
-                    <img src="/images/profile.png" alt="profile icon" />
+                    <img src="/images/profile.svg" alt="profile icon" />
                     <span>MY PROFILE</span>
                 </a>
             </NavMenu>

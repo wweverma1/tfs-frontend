@@ -158,6 +158,7 @@ const Switch = styled.div`
     position: relative;
 
     label {
+        cursor: pointer;
         position: absolute;
         background-color: white;
         border-radius: 50px;
