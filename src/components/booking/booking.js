@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import CondensedMovieDetails from './condensed_movie_details/condensed_movie_details'
 import ScreeningDetails from './screening_details/screening_details'
 import SeatChart from './seat_chart/seat_chart'
+import {
+    Link
+} from "react-router-dom";
 
 function booking() {
     return (
@@ -11,10 +14,12 @@ function booking() {
                 <CondensedMovieDetails />
                 <ScreeningDetails />
                 <SeatChart />
-                <BookTicket>
-                    <img src="/images/ticket.png" alt="" />
-                    <span>BOOK TICKETS</span>
-                </BookTicket>
+                <Link to="/ticket" style={{"text-decoration":"none"}}>
+                    <BookTicket>
+                        <img src="/images/ticket.png" alt="" />
+                        <span>BOOK TICKETS</span>
+                    </BookTicket>
+                </Link>
             </BookingSection>
         </Container>
     )
@@ -23,7 +28,7 @@ function booking() {
 export default booking
 
 const Container = styled.main`
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 140px);
     padding: 0 calc(3.5vw + 5px);
     position: relative;
     overflow-x: hidden;
@@ -35,7 +40,7 @@ const BookingSection = styled.div`
     width: 100%;
     background: #0c111b;
     border-radius: 10px;
-    padding: 10px 40px;
+    padding: 10px 30px;
 
     @media (max-width: 900px) {
         padding: 10px 20px;
@@ -59,4 +64,8 @@ const BookTicket = styled.button`
     &:hover {
         background: rgb(249, 249, 249);
     }
+
+    @media (max-width: 900px) {
+        margin-left:10px;
+    } 
 `

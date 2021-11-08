@@ -8,7 +8,9 @@ import {
 function header() {
     return (
         <Nav>
-            <Logo src="/images/tfs.png" alt="TFS logo" />
+            <Link to="/" style={{"text-decoration":"none"}}>
+                <Logo src="/images/tfs.png" alt="TFS logo" />
+            </Link>
             <NavMenu>
                 <a href="/">
                     <img src="/images/home.svg" alt="home icon" />
@@ -43,6 +45,12 @@ const Nav = styled.nav`
     align-items: center;
     padding: 0 36px;
     overflow-x: hidden;
+
+    @media (max-width: 900px) {
+        flex:1;
+        display: flex;
+        justify-content: space-between;
+    }
 `
 const Logo = styled.img`
     width: 80px;
@@ -92,6 +100,10 @@ const NavMenu = styled.div`
                 opacity: 1;
             }
         }
+    }
+
+    @media (max-width: 900px) {
+        display: none;
     }
 `
 
