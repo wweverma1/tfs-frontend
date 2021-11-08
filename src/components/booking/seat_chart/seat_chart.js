@@ -21,7 +21,7 @@ class seat_chart extends React.Component {
           ['41','42','43', '44', '45', '46', '47', '48', '49', '50']
         ],
         seatReserved: [],
-        seatUnavailable: ['3', '13', '27', '35', '36']
+        seatUnavailable: ['12', '13', '14'],
       }
     }
     

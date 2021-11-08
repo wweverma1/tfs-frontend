@@ -3,6 +3,13 @@
   margin: auto;
 }
 
+@media (max-width: 900px) {
+
+  .grid {
+    width: 80%;
+  }
+} 
+
 .grid td {
   height: 35px;
   width: 35px;
@@ -19,17 +26,15 @@
 }
 
 .unavailable {
-  background: rgb(155, 134, 134, 0.7);
-  border: 1px solid rgb(249, 249, 249, 0.3) !important;
-  color: rgba(255,255,255, 0.7);
   display: inline-block;
+  background-color: #cd5c5c;
   pointer-events: none;
 }
 
 .reserved {
-  border: 2px solid rgb(249, 249, 249);
-  background: rgb(155, 134, 134);
-  color: white;
+  border-color: #1ea83c !important;
+  color: #fff;
+  background-color: #1ea83c!important;
   display: inline-block;
 }
 
