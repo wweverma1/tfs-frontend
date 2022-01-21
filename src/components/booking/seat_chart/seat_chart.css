@@ -6,14 +6,20 @@
 @media (max-width: 900px) {
 
   .grid {
-    width: 80%;
+    width: 100%;
+  }
+
+  .grid td {
+    height: 35px;
+    width: 35px;
+    padding: 5px 5px;
   }
 } 
 
 .grid td {
-  height: 35px;
-  width: 35px;
-  padding: 5px 5px;
+  height: 50px;
+  width: 50px;
+  padding: 15px 10px;
   border: 2px solid rgb(249, 249, 249, 0.5);
   text-align: center;
   float: left;

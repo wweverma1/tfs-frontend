@@ -7,20 +7,18 @@ function ticket() {
             <TicketSection>
                 <TicketMessage>
                     <h1>
-                        Tada
+                        Yay!
                         <img src="https://i.pinimg.com/originals/9d/79/f1/9d79f11547a0edd240cf6178e9a5a871.gif" alt="🎉" />
                     </h1>
                     <h3>
-                        Your seats are successfully booked for the show.
+                        Your ticket is successfully booked for the show, See you soon 🍿
                     </h3>
-                    <h3>See you soon 🍿</h3>
                 </TicketMessage>
                 <DownloadTicket>
-                    <h2>Download your Tickets</h2>
                     <a href="/ticket_template/ticket.pdf" target="_blank" style={{"text-decoration":"none"}}>
                         <Download>
                             <img src="/images/tickets.svg" alt="Ticket" />
-                            <span>DOWNLOAD</span>
+                            <span>DOWNLOAD YOUR TICKETS</span>
                         </Download>
                     </a>
                 </DownloadTicket>
@@ -55,7 +53,9 @@ const TicketMessage = styled.div`
     }
 `
 
-const DownloadTicket = styled.div``
+const DownloadTicket = styled.div`
+    margin: 20px 0px;
+`
 
 const Download = styled.button`
     border-radius: 4px;
