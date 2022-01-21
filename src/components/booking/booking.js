@@ -7,7 +7,15 @@ import {
     Link
 } from "react-router-dom";
 
+function setZoom() {
+    if (navigator.appVersion.indexOf("Win") !== -1)
+    {
+        document.body.style.zoom = "75%";
+    }
+}
+
 function booking() {
+    setZoom()
     return (
         <Container>
             <BookingSection>

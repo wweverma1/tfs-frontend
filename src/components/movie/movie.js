@@ -3,7 +3,15 @@ import styled from 'styled-components'
 import MovieDetails from './movie_details/movie_details'
 import ScreeningDetails from './screening_details/screening_details'
 
+function setZoom() {
+    if (navigator.appVersion.indexOf("Win") !== -1)
+    {
+        document.body.style.zoom = "90%";
+    }
+}
+
 function movie() {
+    setZoom()
     return (
         <Container>
             <MovieDetails />
