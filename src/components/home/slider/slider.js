@@ -23,7 +23,6 @@ function slider() {
             <Link to="/movie">
                 <Wrap>
                     <img src="/images/poster1.jpg" alt="Movie Poster" />
-                    {/* <iframe src="https://www.youtube.com/embed/3KR8_igDs1Y?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=0" frameborder="0" allow="autoplay"></iframe> */}
                 </Wrap>
             </Link>
             <Link to="/movie">
