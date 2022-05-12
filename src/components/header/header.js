@@ -16,15 +16,15 @@ function header() {
                     <img src="/images/home.svg" alt="home icon" />
                     <span>HOME</span>
                 </a>
-                <a href="/request">
+                <a>
                     <img src="/images/request.svg" alt="request a movie icon" />
                     <span>REQUEST A MOVIE</span>
                 </a>
-                <a href="/history">
+                <a>
                     <img src="/images/history.svg" alt="history icon" />
                     <span>HISTORY</span>
                 </a>
-                <a href="/profile">
+                <a>
                     <img src="/images/profile.svg" alt="profile icon" />
                     <span>MY PROFILE</span>
                 </a>
