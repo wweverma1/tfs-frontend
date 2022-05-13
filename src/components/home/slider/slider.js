@@ -18,17 +18,17 @@ function slider() {
 
     return (
         <Carousel {...settings}>
-            <Link to={`/movie/`+movieData[0]['id']}>
+            <Link to={'/movie/'+movieData[0]["id"]}>
                 <Wrap>
                     <img src="/images/poster1.jpg" alt={movieData[0]["name"]} />
                 </Wrap>
             </Link>
-            <Link to={`/movie/`+movieData[1]['id']}>
+            <Link to={'/movie/'+movieData[1]["id"]}>
                 <Wrap>
                     <img src="/images/poster2.jpg" alt={movieData[1]["name"]} />
                 </Wrap>
             </Link>
-            <Link to={`/movie/`+movieData[2]['id']}>
+            <Link to={'/movie/'+movieData[2]["id"]}>
                 <Wrap>
                     <img src="/images/poster3.jpg" alt={movieData[2]["name"]} />
                 </Wrap>

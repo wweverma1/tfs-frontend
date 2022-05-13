@@ -1,54 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-    Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { movieData } from "./../../../data/data.js";
 
 function movies_list() {
     return (
         <Container>
             <h4>Now Showing</h4>
             <Content>
-                <Link to="/movie">
-                    <Wrap>
-                        <img src="https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg" alt="Movie Poster" />
-                    </Wrap>
-                </Link>
-                <Link to="/movie">
-                    <Wrap>
-                        <img src="https://m.media-amazon.com/images/M/MV5BOWEyYmRkMGUtYjQ0YS00MjhkLTlkNGUtM2Y4NGUxZTQ5ZGJhXkEyXkFqcGdeQXVyODc0OTEyNDU@._V1_.jpg" alt="Movie Poster" />
-                    </Wrap>
-                </Link>
-                <Link to="/movie">
-                    <Wrap>
-                        <img src="https://m.media-amazon.com/images/M/MV5BODkzMjhjYTQtYmQyOS00NmZlLTg3Y2UtYjkzN2JkNmRjY2FhXkEyXkFqcGdeQXVyNTM4MDQ5MDc@._V1_FMjpg_UX1000_.jpg" alt="Movie Poster" />
-                    </Wrap>
-                </Link>
-                <Link to="/movie">
-                    <Wrap>
-                        <img src="https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_.jpg" alt="Movie Poster" />
-                    </Wrap>
-                </Link>
-                <Link to="/movie">
-                    <Wrap>
-                        <img src="https://m.media-amazon.com/images/M/MV5BZGRkOGMxYTUtZTBhYS00NzI3LWEzMDQtOWRhMmNjNjJjMzM4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="Movie Poster" />
-                    </Wrap>
-                </Link>
-                <Link to="/movie">
-                    <Wrap>
-                        <img src="https://m.media-amazon.com/images/M/MV5BYjQ5NjM0Y2YtNjZkNC00ZDhkLWJjMWItN2QyNzFkMDE3ZjAxXkEyXkFqcGdeQXVyODIxMzk5NjA@._V1_.jpg" alt="Movie Poster" />
-                    </Wrap>
-                </Link>
-                <Link to="/movie">
-                    <Wrap>
-                        <img src="https://m.media-amazon.com/images/M/MV5BOTJlNTQ4OGUtODhlMy00NmNkLWI0NjctMWE0ZTc5N2EyZTA4XkEyXkFqcGdeQXVyMTM2ODk1OTQ@._V1_.jpg" alt="Movie Poster" />
-                    </Wrap>
-                </Link>
-                <Link to="/movie">
-                    <Wrap>
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTU2MDY3MzAzMl5BMl5BanBnXkFtZTcwMTg0NjM5NA@@._V1_.jpg" alt="Movie Poster" />
-                    </Wrap>
-                </Link>
+                {movieData.map((movie, key) => {
+                    return (
+                        <Link to={'/movie/'+movie.id}>
+                            <Wrap>
+                                <img src={movie.poster} alt={movie.name} />
+                            </Wrap>
+                        </Link>
+                    );
+                })}
             </Content>
         </Container>
     )
