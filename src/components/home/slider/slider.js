@@ -3,12 +3,10 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {
-    Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { movieData } from "./../../../data/data.js";
 
 function slider() {
-
     let settings = {
         dots: true,
         infinite: true,
@@ -20,19 +18,19 @@ function slider() {
 
     return (
         <Carousel {...settings}>
-            <Link to="/movie">
+            <Link to={`/movie/`+movieData[0]['id']}>
                 <Wrap>
-                    <img src="/images/poster1.jpg" alt="Movie Poster" />
+                    <img src="/images/poster1.jpg" alt={movieData[0]["name"]} />
                 </Wrap>
             </Link>
-            <Link to="/movie">
+            <Link to={`/movie/`+movieData[1]['id']}>
                 <Wrap>
-                    <img src="/images/poster2.jpg" alt="Movie Poster" />
+                    <img src="/images/poster2.jpg" alt={movieData[1]["name"]} />
                 </Wrap>
             </Link>
-            <Link to="/movie">
+            <Link to={`/movie/`+movieData[2]['id']}>
                 <Wrap>
-                    <img src="/images/poster3.jpg" alt="Movie Poster" />
+                    <img src="/images/poster3.jpg" alt={movieData[2]["name"]} />
                 </Wrap>
             </Link>
         </Carousel>
