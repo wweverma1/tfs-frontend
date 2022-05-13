@@ -2,26 +2,24 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 import 'font-awesome/css/font-awesome.min.css'
-import {
-    Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function MovieDetails() {
+const MovieDetails = (props) => {
     const [mute, setMute] = useState(true);
 
     return (
         <Container>
             <Details>
                 <h1>
-                    YOUR NAME
+                    {props.movie.name}
                 </h1>
                 <SubTitle>
-                    English • 116m • Animated
+                    {props.movie.lang} • {props.movie.duration}m • Animated
                 </SubTitle>
                 <Description>
-                    Your Name (Japanese: 君の名は。, Hepburn: Kimi no Na wa) is a 2016 Japanese animated romantic fantasy film produced by CoMix Wave Films and released by Toho. It depicts a high school boy in Tokyo and a high school girl in the Japanese countryside who suddenly and inexplicably begin to swap bodies.
+                    {props.movie.desc}
                 </Description>
-                <Link to="/booking" style={{"text-decoration":"none"}}>
+                <Link to={'/booking/'+props.movie.id} style={{"text-decoration":"none"}}>
                     <BookTicket>
                         <img src="/images/ticket.png" alt="" />
                         <span>BOOK TICKETS</span>
@@ -30,8 +28,7 @@ function MovieDetails() {
             </Details>
             <Trailer>
                 <MovieTrailerPlayer>
-                    {/* <iframe id="MovieTrailer" title="Trailer" src="https://www.youtube.com/embed/3KR8_igDs1Y?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" frameborder="0" allow="autoplay"></iframe> */}
-                    <ReactPlayer id='MovieTrailer' url='https://www.youtube.com/watch?v=3KR8_igDs1Y' playing={true} loop={true} muted={mute} controls={false} width='100%' height='100%' />
+                    <ReactPlayer id='MovieTrailer' url={props.movie.trailer} playing={true} loop={true} muted={mute} controls={false} width='100%' height='100%' />
                     <UnMute onClick={() => setMute(!mute)}>
                         <img src={mute ? "/images/muted.png" : "/images/unmuted.png"} alt="Unmute" />
                     </UnMute>
