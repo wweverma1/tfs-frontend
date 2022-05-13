@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import CondensedMovieDetails from './condensed_movie_details/condensed_movie_details'
 import ScreeningDetails from './screening_details/screening_details'
 import SeatChart from './seat_chart/seat_chart'
-import {
-    Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useParams }from "react-router-dom"
+import { movieData } from "./../../data/data.js";
 
 function setZoom() {
     if (navigator.appVersion.indexOf("Win") !== -1)
@@ -14,16 +14,18 @@ function setZoom() {
     }
 }
 
-function booking() {
+const Booking = () => {
+    const { movie_id } = useParams();
+    const booking_id = Math.floor(1000 + Math.random() * 9000);
     setZoom()
     return (
         <Container>
             <BookingSection>
-                <CondensedMovieDetails />
-                <ScreeningDetails />
+                <CondensedMovieDetails movie={movieData[movie_id-1]} />
+                <ScreeningDetails movie={movieData[movie_id-1]} />
                 <SeatChart />
                 <BookButton>
-                    <Link to="/ticket" style={{"text-decoration":"none"}}>
+                    <Link to={'/ticket/'+booking_id} style={{"text-decoration":"none"}}>
                         <BookTicket>
                             <img src="/images/ticket.png" alt="" />
                             <span>BOOK TICKETS</span>
@@ -33,14 +35,14 @@ function booking() {
             </BookingSection>
             <MoviePoster>
                 <Wrap>
-                    <img src="https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg" alt="Movie Poster" />
+                    <img src={movieData[movie_id-1]["poster"]} alt={movieData[movie_id-1]["name"]} />
                 </Wrap>
             </MoviePoster>
         </Container>
     )
 }
 
-export default booking
+export default Booking
 
 const Container = styled.main`
     min-height: calc(100vh - 140px);
@@ -101,7 +103,7 @@ const BookButton = styled.div`
 const BookTicket = styled.button`
     border-radius: 4px;
     font-size: 15px;
-    padding: 20px 24px; 
+    padding: 15px 20px; 
     background: rgb(249, 249, 249, 0.8);
     border: none;
     letter-spacing: 1.8px;

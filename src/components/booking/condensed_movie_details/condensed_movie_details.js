@@ -1,23 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function condensed_movie_details() {
+const CondensedMovieDetails = (props) => {
     return (
         <Container>
             <img src="/images/cinema.png" alt="cinema icon" />
             <Details>
                 <h1>
-                    YOUR NAME
+                    {props.movie.name}
                 </h1>
                 <SubTitle>
-                    English • 116m • Animated
+                    {props.movie.lang} • {props.movie.duration}m • Animated
                 </SubTitle>
             </Details>
         </Container>
     )
 }
 
-export default condensed_movie_details
+export default CondensedMovieDetails
 
 const Container = styled.div`
     padding: 30px 0px 0px;
@@ -35,7 +35,13 @@ const Container = styled.div`
 const Details = styled.div`
     line-height: 3px;
     padding: 10px;
-    text-align: center;
+    text-align: left;
+
+    @media (max-width: 900px) {
+        h1 {
+            font-size: 22px;
+        }
+    }
 `
 
 const SubTitle = styled.div`

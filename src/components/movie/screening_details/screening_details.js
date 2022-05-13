@@ -48,6 +48,9 @@ const Content = styled.div`
     grid-gap: 25px;
     overflow-X:auto;
     padding-left:5px;
+    @media (max-width: 900px) {
+        font-size: 12px;
+    }
 
     ::-webkit-scrollbar {
         display: none;
@@ -63,7 +66,10 @@ const Wrap = styled.div`
     transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
     text-align: center;
     padding: 20px 20px 20px;
-
+    @media (max-width: 900px) {
+        width: 150px;
+    }
+    
     &:hover {
         transform: scale(1.05);
         box-shadow: rgba(0 0 0 / 80%) 0px 40px 58px -16px,
