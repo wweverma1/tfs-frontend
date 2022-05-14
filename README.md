@@ -1,8 +1,10 @@
 # tfs-frontend
-The frontend of the webapp TFPS which is inspired by bookmyshow. This webapp is for TFS, IIT KGP so that the students can see upcoming movies and book tickets for it.
+
+This is the front end of TFS, a project inspired by [BookMyShow](https://in.bookmyshow.com/). This project aims to aid a cinema theatre where visitors can view upcoming films and purchase tickets.
 
 ## Deployed on Netlify:
-[View](https://tfs-frontend.netlify.app)
+
+[View Deployment](https://tfs-frontend.netlify.app)
 
 ## Available Scripts
 
