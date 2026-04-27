@@ -1,50 +1,35 @@
-# TFS frontend
+# TFS Frontend
 
-This is the front end of TFS, a project inspired by [BookMyShow](https://in.bookmyshow.com/). This project aims to aid a cinema theatre where visitors can view upcoming films and purchase tickets.
+This is the front-end application for TFS, a cinema theatre ticket booking platform inspired by BookMyShow. This project allows visitors to browse upcoming films, view movie details, and purchase tickets.
 
-## Deployed on Netlify:
+## 🚀 Live Demo
+[View Deployment on Netlify](https://tfs-frontend.netlify.app)
 
-[View Deployment](https://tfs-frontend.netlify.app)
+## ✨ Key Features
+* **Movie Browsing**: Explore available and upcoming movies on the home page.
+* **Dedicated Movie Pages**: View specific details for individual movies (via the `/movie/:movie_id` route), with support for video playback using `react-player`.
+* **Interactive Ticket Booking**: Select seats seamlessly utilizing the `react-seat-picker` library across the dedicated booking routes.
+* **User Authentication**: Secure login access.
+* **Digital Tickets**: View confirmed booking and ticket details.
 
-## Available Scripts
+## 🛠 Tech Stack
+* **Core Framework**: React.js
+* **State Management**: Redux Toolkit & React-Redux
+* **Routing**: React Router DOM
+* **Styling & UI**: Styled-Components, FontAwesome, React-Slick (Carousels), and React-Tooltip
 
-In the project directory, you can run:
+## 💻 Local Development Setup
+
+To run this project locally, clone the repository and run the following commands:
+
+### `npm install`
+Installs the necessary project dependencies defined in `package.json`.
 
 ### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. 
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
 ### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Builds the app for production to the `build` folder, optimizing performance and minifying bundles.
